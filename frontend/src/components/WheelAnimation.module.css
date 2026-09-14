@@ -1,0 +1,46 @@
+.container {
+  position: fixed;
+  right: -170px;
+  top: 50%;
+  transform: translateY(-50%);
+  width:  clamp(420px, 54vw, 700px);
+  height: clamp(420px, 54vw, 700px);
+  z-index: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.wheel {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  will-change: transform;
+  filter:
+    drop-shadow(-36px 0 80px rgba(232, 114, 12, 0.13))
+    drop-shadow(-10px 0 24px rgba(232, 114, 12, 0.05))
+    drop-shadow(0 0 60px rgba(0, 0, 0, 0.92));
+}
+
+@media (max-width: 1200px) {
+  .container {
+    right: -200px;
+    width:  clamp(340px, 46vw, 560px);
+    height: clamp(340px, 46vw, 560px);
+    opacity: 0.7;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    right: -100px;
+    width:  300px;
+    height: 300px;
+    opacity: 0.35;
+    top: 62%;
+  }
+}
+
+@media (max-width: 620px) {
+  .container { display: none; }
+}

@@ -1,0 +1,138 @@
+/* ─── PRIMITIVE TOKENS ──────────────────────────────────────────────────── */
+:root, html {
+  color-scheme: dark;
+}
+
+:root {
+  /* Color primitives */
+  --p-black:       #0a0a0a;
+  --p-white:       #f7f7f5;
+  --p-orange-500:  #e8720c;
+  --p-orange-600:  #c55e08;
+  --p-orange-400:  #ff8c2a;
+  --p-gray-950:    #0d0d0d;
+  --p-gray-900:    #111111;
+  --p-gray-800:    #1a1a1a;
+  --p-gray-700:    #2a2a2a;
+  --p-gray-600:    #3a3a3a;
+  --p-gray-500:    #555555;
+  --p-gray-400:    #888888;
+  --p-gray-300:    #aaaaaa;
+  --p-gray-200:    #cccccc;
+  --p-gray-100:    #e5e5e5;
+
+  /* ─── SEMANTIC TOKENS ─────────────────────────────────────────────────── */
+
+  /* Surfaces */
+  --color-bg:           var(--p-black);
+  --color-surface:      var(--p-gray-900);
+  --color-surface-2:    var(--p-gray-800);
+  --color-surface-3:    var(--p-gray-700);
+  --color-border:       var(--p-gray-700);
+  --color-border-light: var(--p-gray-600);
+
+  /* Text */
+  --color-text:         var(--p-white);
+  --color-text-muted:   var(--p-gray-300);
+  --color-text-subtle:  var(--p-gray-400);
+
+  /* Brand accent */
+  --color-accent:       var(--p-orange-500);
+  --color-accent-hover: var(--p-orange-600);
+  --color-accent-light: var(--p-orange-400);
+
+  /* ─── TYPOGRAPHY ──────────────────────────────────────────────────────── */
+  --font-display: "Bebas Neue", sans-serif;
+  --font-body:    "Inter", sans-serif;
+  --font-mono:    "JetBrains Mono", monospace;
+
+  --text-xs:   0.75rem;    /* 12px */
+  --text-sm:   0.875rem;   /* 14px */
+  --text-base: 1rem;       /* 16px */
+  --text-lg:   1.125rem;   /* 18px */
+  --text-xl:   1.25rem;    /* 20px */
+  --text-2xl:  1.5rem;     /* 24px */
+  --text-3xl:  2rem;       /* 32px */
+  --text-4xl:  3rem;       /* 48px */
+  --text-5xl:  4.5rem;     /* 72px */
+  --text-hero: clamp(4rem, 10vw, 9rem);
+
+  --leading-tight:  1.1;
+  --leading-snug:   1.3;
+  --leading-normal: 1.5;
+  --leading-loose:  1.7;
+
+  /* ─── SPACING ─────────────────────────────────────────────────────────── */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-32: 128px;
+
+  /* ─── BORDERS & RADIUS ───────────────────────────────────────────────── */
+  --radius-sm:   2px;
+  --radius-md:   4px;
+  --radius-lg:   8px;
+  --radius-xl:   12px;
+  --radius-2xl:  20px;
+  --radius-full: 9999px;
+
+  /* ─── MOTION / EASING ────────────────────────────────────────────────── */
+  --ease-out:    cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
+
+  --duration-fast:   150ms;
+  --duration-base:   250ms;
+  --duration-slow:   400ms;
+
+  /* ─── LAYOUT ─────────────────────────────────────────────────────────── */
+  --max-width: 1280px;
+  --nav-height: 64px;
+
+  /* ─── COMPONENT TOKENS ───────────────────────────────────────────────── */
+
+  /* Button */
+  --btn-bg:          var(--color-accent);
+  --btn-bg-hover:    var(--color-accent-hover);
+  --btn-text:        var(--p-white);
+  --btn-radius:      var(--radius-md);
+  --btn-padding:     var(--space-3) var(--space-6);
+  --btn-font:        var(--font-body);
+  --btn-weight:      600;
+
+  /* Card */
+  --card-bg:         var(--color-surface);
+  --card-border:     var(--color-border);
+  --card-radius:     var(--radius-lg);
+
+  /* Input */
+  --input-bg:        var(--color-surface-2);
+  --input-border:    var(--color-border);
+  --input-text:      var(--color-text);
+  --input-radius:    var(--radius-md);
+  --input-padding:   var(--space-3) var(--space-4);
+
+  /* Nav */
+  --nav-bg:          rgba(8, 8, 8, 0.88);
+  --nav-border:      rgba(42, 42, 42, 0.6);
+
+  /* Shadows */
+  --shadow-sm:         0 1px 4px rgba(0,0,0,0.5);
+  --shadow-md:         0 4px 16px rgba(0,0,0,0.6);
+  --shadow-lg:         0 8px 36px rgba(0,0,0,0.7);
+  --shadow-card-hover: 0 16px 48px rgba(0,0,0,0.7), 0 0 0 1px rgba(232,114,12,0.15);
+  --glow-accent:       0 0 28px rgba(232,114,12,0.22);
+  --glow-accent-xl:    0 0 60px rgba(232,114,12,0.28);
+
+  /* Gradient accent text */
+  --gradient-accent: linear-gradient(135deg, #ff9c3a 0%, #e8720c 55%, #c55e08 100%);
+}

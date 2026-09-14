@@ -1,0 +1,122 @@
+.locationSection {
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+}
+
+.locationInner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 440px;
+  max-width: var(--max-width);
+  margin-inline: auto;
+}
+
+.locationInfo {
+  padding: var(--space-16) clamp(var(--space-5), 5vw, var(--space-16));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0;
+}
+
+.locationLogo {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  margin-bottom: var(--space-8);
+  mix-blend-mode: screen;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-3);
+}
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+  color: var(--color-text);
+  margin-bottom: var(--space-8);
+}
+
+.accentWord {
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.locationList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  list-style: none;
+}
+
+.locationList li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.locationList li svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--color-accent);
+}
+
+.locationList li a {
+  color: var(--color-text-muted);
+  transition: color var(--duration-fast);
+}
+.locationList li a:hover { color: var(--color-accent); }
+
+.whatsappLink {
+  color: var(--color-accent) !important;
+  font-weight: 600;
+}
+.whatsappLink:hover { color: var(--color-accent-hover) !important; }
+
+.locationMap {
+  position: relative;
+  min-height: 440px;
+}
+
+.locationMap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  filter: grayscale(0.3) contrast(1.05);
+}
+
+.copyright {
+  background: #080808;
+  border-top: 1px solid var(--color-border);
+  padding-block: var(--space-5);
+  text-align: center;
+}
+.copyright p {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--color-text-subtle);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .locationInner { grid-template-columns: 1fr; }
+  .locationMap { min-height: 300px; }
+}
